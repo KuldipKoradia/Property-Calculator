@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="css/screen.css">
+	<link rel="icon" href="images/favicon.png">
+	<title>Property Price Calculator</title>
+</head>
+
+<body>
+	<section class="calculator_form">
+		<div class="container">
+			<div class="calc_form_box">
+				<form class="calc_form">
+					<div class="row">
+						<div class="col-12">
+							<label>Area (in Sq.Ft)</label>
+							<input type="number" name="area">
+						</div>
+						<div class="col-12">
+							<label>Basic Price (per Sq.Ft)</label>
+							<input type="number" name="basic_price">
+						</div>
+						<div class="col-12">
+							<label>AUDA Price + GEB (per Sq.Ft)</label>
+							<input type="number" name="auda_price">
+						</div>
+						<div class="col-12">
+							<label>PLC - Preferential Location Charges (per Sq.Ft)</label>
+							<input type="number" name="plc">
+						</div>
+						<div class="col-12">
+							<label>Property Document Size</label>
+							<input type="number" name="document_size">
+						</div>
+						<div class="col-12">
+							<label>Stamp Duty + GST (in %)</label>
+							<input type="number" name="duty">
+						</div>
+						<div class="col-12">
+							<label>Running Maintenance (per Sq.Ft)</label>
+							<input type="number" name="maintenance">
+						</div>
+						<div class="col-12">
+							<label>Legal Charges</label>
+							<input type="number" name="legal_charges">
+						</div>
+						<div class="col-12">
+							<label>Final Total</label>
+							<h3 id="total">₹ 0</h3>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

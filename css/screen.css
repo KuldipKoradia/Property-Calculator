@@ -1,0 +1,141 @@
+:root{
+	--body-color: #3F3F44;
+	--body-color-rgb: 63, 63, 68;
+	--body-font: 'Open Sans';
+	--title-font: 'Outfit';
+	--white-color: #FFFFFF;
+	--white-color-rgb: 255, 255, 255;
+	--black-color: #000000;
+	--black-color-rgb: 0, 0, 0;
+	--active-color: #F7BE1C;
+}
+::selection{color: var(--white-color);background-color: var(--body-color);}
+
+/* 1. Create a Clean Base ------------------------------------------------------------------------------*/
+
+html, body, br, hr, div, span, a, object, iframe, ul, ol, dl, li, dt, dd, h1, h2, h3, h4, h5, h6, p, blockquote, q, address, small, big, cite, dfn, ins, del, i, em, b, strong, sup, sub, strike, pre, code, samp, kbd, var, tt, form, label,input, textarea, option, .nobox {background: transparent;border: 0;font-size: 100%;margin: 0;outline: 0;padding: 0;vertical-align: baseline;}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {display: block;}
+blockquote, q {quotes: none;}
+br {height: 0;}
+ul, ol {margin: 0;padding: 0;}
+ul, ol, dl, li {margin: 0;padding: 0;}
+html, body{-webkit-appearance:none;appearance:none;border:none;-webkit-text-size-adjust:none;}
+
+/* 2. Define Base Typography ------------------------------------------------------------------------------*/
+
+*, *:after, *:before {box-sizing: border-box;}
+body{padding: 0px;margin: 0;font-family: var(--body-font) !important;font-size: 14px;color: var(--body-color) !important;line-height:24px;}
+body.overlay_backdrop:before {content: '';position: fixed;top: 0;bottom: 0;left: 0;right: 0;background-color: var(--body-color);opacity: 0.5;z-index: 10000;}
+body.no_scroll {overflow: hidden;}
+.bg-cover {background-size: cover;background-position: center;background-repeat: no-repeat;}
+.bg-cover > img {opacity: 0;width: 100%;}
+
+/* Create the Default Headers */
+h1, h2, h3, h4, h5, h6 {margin: 0;font-weight: normal;color: var(--body-color);line-height:1.2;}
+
+/* Specific Header Settings */
+h1, .h1 {font-size: 32px;font-weight: 700;}
+h2, .h2 {font-size: 32px;font-weight: 700;}
+h3, .h3 {font-size: 30px;font-weight: 700;}
+h4, .h4 {font-size: 24px;font-weight: 700;}
+h5, .h5 {font-size: 20px;font-weight: 700;}
+h6, .h6 {font-size: 18px;font-weight: 700;}
+
+/* Other Typo */
+strong {font-weight: 700;}
+hr {border:0 #000 solid;border-top-width: 1px;clear: both;height: 0;}
+ol {list-style: decimal;}
+ul {list-style: none;}
+
+/* 3. Images ------------------------------------------------------------------------------*/
+
+/*Remove border around linked images*/
+img {max-width: 100%;border: 0;border-style: none;}
+
+/* 4. Links ------------------------------------------------------------------------------*/
+
+/* Default Link Types */
+a {text-decoration:none;transition: 0.4s all;display: inline-block;}
+
+/* 5. Forms ------------------------------------------------------------------------------*/
+
+.button {padding: 15px 60px 15px 40px;background: url(../images/button_arrow.svg) no-repeat right 40px center, rgb(236, 142, 54);background: url(../images/button_arrow.svg) no-repeat right 40px center, linear-gradient(125deg, rgba(236, 142, 54, 1) 0%, rgba(241, 199, 50, 1) 100%);font-size: 17px;line-height: 36px;color: var(--white-color);font-family: var(--body-font);border-radius: 80px;border: none !important;outline: none !important;display: inline-flex;justify-content: center;align-items: center;cursor: pointer;box-shadow: 5px 5px 20px rgba(241, 199, 50, 0.4), inset 0px 0px 0px rgba(241, 199, 50, 0), inset 0px 0px 0px rgba(236, 142, 54, 0);transition: all 0.4s;}
+.button:hover {box-shadow: 0px 0px 0px rgba(241, 199, 50, 0), inset 6px 6px 8px rgba(241, 199, 50, 1), inset -6px -6px 8px rgba(236, 142, 54, 1);}
+select, input[type="search"], input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="number"], input[type="date"], input[type="time"], textarea {border: 1px solid rgba(var(--body-color-rgb), 0.2);background-color: var(--white-color);height: 48px;padding: 0px 16px;border-radius: 8px;width: 100%;resize: none;appearance: none;outline: none;font-size: 16px;color: var(--black-color);display: block;font-family: var(--body-font);}
+select {padding: 0px 50px 0px 16px;background-image: url(../images/select_arrow.svg);background-position: right 20px center;background-repeat: no-repeat;background-size: 10px auto;}
+textarea {height: 120px;padding: 16px;}
+input::-webkit-input-placeholder {color: var(--black-color);}
+input:-moz-placeholder {color: var(--black-color);}
+input::-moz-placeholder {color: var(--black-color);}
+input:-ms-input-placeholder {color: var(--black-color);}
+textarea::-webkit-input-placeholder {color: var(--black-color);}
+textarea:-moz-placeholder {color: var(--black-color);}
+textarea::-moz-placeholder {color: var(--black-color);}
+textarea:-ms-input-placeholder {color: var(--black-color);}
+button.icon_btn, a.icon_btn, input.icon_btn {border: 1px solid #E1E1E1;outline: none !important;box-shadow: none !important;padding: 0;height: 40px;width: 40px;border-radius: 50%;display: flex;align-items: center;justify-content: center;cursor: pointer;background-color: transparent;}
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-results-button, input[type="search"]::-webkit-search-results-decoration {-webkit-appearance:none;}
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none;-moz-appearance: none;appearance: none;margin: 0;}
+
+/* Removes fieldset borders. even on Opea 7 */
+/* fieldset {border: 1px solid transparent;} */
+
+/* 6. Tables ------------------------------------------------------------------------------*/
+
+/* Table Fixes */
+table {border-spacing: 0;border-collapse: collapse;}
+td {font-weight: normal;}
+
+/* 7. Framework ------------------------------------------------------------------------------*/
+
+/* container */
+.container{max-width: 1660px;width: 100%;padding:0 15px; margin: 0 auto;}
+.row{display: flex;flex-wrap: wrap;margin-left: -15px;margin-right: -15px;}
+.col-12, .col-11, .col-10, .col-9, .col-8, .col-7, .col-6, .col-5, .col-4, .col-3, .col-2, .col-1{position: relative;width: 100%;padding-top: 5px;padding-bottom: 5px;padding-right: 15px;padding-left: 15px;}
+.col-12 {max-width: 100%;}
+.col-11 {max-width: 91.66666667%;}
+.col-10 {max-width: 83.33333333%;}
+.col-9 {max-width: 75%;}
+.col-8 {max-width: 66.66666667%;}
+.col-7 {max-width: 58.33333333%;}
+.col-6 {max-width: 50%;}
+.col-5 {max-width: 41.66666667%;}
+.col-4 {max-width: 33.33333333%;}
+.col-3 {max-width: 25%;}
+.col-2 {max-width: 16.66666667%;}
+.col-1 {max-width: 8.33333333%;}
+.d-flex{display:flex;}
+.d-none{display:none;}
+.flex-wrap{flex-wrap:wrap;}
+.justify-content-start{justify-content:flex-start;}
+.justify-content-center{justify-content:center;}
+.justify-content-end{justify-content:flex-end;}
+.justify-content-between{justify-content:space-between;}
+.align-items-start{align-items: flex-start;}
+.align-items-center{align-items: center;}
+.align-items-end{align-items: flex-end;}
+.row-reverse{flex-direction: row-reverse;}
+.text-center{text-align: center;}
+.text-left{text-align: left;}
+.text-right{text-align: right;}
+
+.mobile_only_1199 {display: none !important;}
+@media (max-width: 1199px) {
+	.mobile_only_1199 {display: block !important;}
+	.desktop_only_1199 {display: none !important;}
+}
+.mobile_only_991 {display: none !important;}
+@media (max-width: 991px) {
+	.mobile_only_991 {display: block !important;}
+	.desktop_only_991 {display: none !important;}
+}
+.mobile_only_767 {display: none !important;}
+@media (max-width: 767px) {
+	.mobile_only_767 {display: block !important;}
+	.desktop_only_767 {display: none !important;}
+}
+
+.calculator_form {min-height: 100vh;display: flex;align-items: center;}
+
+/* ------------------------------------------------------------------------------------------------------- */
