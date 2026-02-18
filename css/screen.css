@@ -136,6 +136,6 @@ td {font-weight: normal;}
 	.desktop_only_767 {display: none !important;}
 }
 
-.calculator_form {min-height: 100vh;display: flex;align-items: center;}
+.calculator_form {min-height: 100dvh;display: flex;align-items: center;}
 
 /* ------------------------------------------------------------------------------------------------------- */
