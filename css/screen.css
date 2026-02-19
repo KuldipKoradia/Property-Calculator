@@ -137,5 +137,6 @@ td {font-weight: normal;}
 }
 
 .calculator_form {min-height: 100dvh;display: flex;align-items: center;}
+.calculator_form input[name="property_name"] {text-transform: capitalize;}
 
 /* ------------------------------------------------------------------------------------------------------- */
